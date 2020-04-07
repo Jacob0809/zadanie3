@@ -28,7 +28,7 @@ class Wektor {
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-istream& operator >> (istream &Strm, Wektor &Wek)
+istream& operator >> (istream &Strm, Wektor &Wek);
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
@@ -37,11 +37,12 @@ istream& operator >> (istream &Strm, Wektor &Wek)
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-ostream& operator << (ostream& Strm, const Wektor &Wek)
-Wektor operator + (Wektor Skl1, Wektor Skl2)
-Wektor operator - (Wektor Skl1, Wektor Skl2)
-double operator * (Wektor Skl1, Wektor Skl2)
-Wektor operator * (Wektor Skl1, double Skl2)
-Wektor operator / (Wektor Skl1, double Skl2)
+ostream& operator << (ostream& Strm, const Wektor &Wek);
+Wektor operator + (Wektor Skl1, Wektor Skl2);
+Wektor operator - (Wektor Skl1, Wektor Skl2);
+double operator * (Wektor Skl1, Wektor Skl2);
+Wektor operator * (Wektor Skl1, double Skl2);
+Wektor operator / (Wektor Skl1, double Skl2);
+Wektor operator @ (Wektor Skl1, Wektor Skl2);
 
 #endif
