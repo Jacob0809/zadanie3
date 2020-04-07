@@ -2,6 +2,7 @@
 #define MACIERZ_HH
 
 #include "rozmiar.h"
+#include "Wektor.hh"
 #include <iostream>
 using namespace std;
 
@@ -14,7 +15,13 @@ using namespace std;
 class Macierz {
   Wektor kolumny[ROZMIAR];
   public:
-  
+  void setKolumna(unsigned int index, double war){
+     kolumny[index]=war;
+   }
+  double getKolumna(unsigned int index) const{
+     return kolumny[index];
+   }
+
   void Transponuj();
   double det();
 
