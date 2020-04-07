@@ -1,29 +1,22 @@
 #include "Macierz.hh"
 #include "Wektor.hh"
 #include <iostream>
+#include<cmath>
 
 using namespace std;
 
 istream& operator >> (istream &Strm, Macierz &Mac)
 {
-    Wektor z;
-    for(int i=0; i<ROZMIAR; i++)
-    {
-        Strm >> z;
-        Mac.setKolumna(z,i);
-    }
-    return Strm;
+    
 }
 
 ostream& operator << (ostream &Strm, const Macierz &Mac)
 {
-    Strm<< endl;
-    for(int i=0; i<ROZMIAR; i++)
-    {
-        Strm<< Mac.getKolumna(i) <<endl;
-    }
+    Mac.WyswietlMac();
     return Strm;
 }
+
+
 
 double Macierz::det()
 {
@@ -33,4 +26,19 @@ double Macierz::det()
 void Macierz::Transponuj()
 {
 
+}
+
+
+void Macierz::Poteguj()
+{    
+    int a=0;
+    cout<<"podaj potege ";
+    cin>>a;
+    for(int i=0; i<ROZMIAR-1; i++)
+    {
+        for(int j=0; j<ROZMIAR-1; j++)
+        {
+            kolumny[i][j]=pow(kolumny[i][j], a);
+        }
+    }
 }
