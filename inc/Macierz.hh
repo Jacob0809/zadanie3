@@ -2,6 +2,7 @@
 #define MACIERZ_HH
 
 #include "rozmiar.h"
+#include "Wektor.hh"
 #include <iostream>
 using namespace std;
 
@@ -13,9 +14,17 @@ using namespace std;
  */
 class Macierz {
   Wektor kolumny[ROZMIAR];
+
   public:
+  void WczytajMac();
+
+  void WyswietlMac();
+
+  void WyswietlWyz();
   
+
   void Transponuj();
+  
   double det();
 
 
